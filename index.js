@@ -10,7 +10,7 @@ app.get("/", function(req, res) {
   res.send("GET sent");
 });
 app.post("/login", function(req, res) {
-  if (data.user == req.body.user) {
+  if (data.user == req.body.user && data.pass == req.body.pass) {
     res.write('{"status":"success"}');
   } else {
     res.write('{"status":"fail"}');
